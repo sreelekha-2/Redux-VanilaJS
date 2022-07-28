@@ -21,6 +21,7 @@ const decrement = (num) => {
 
 //reducer
 function counterReducer(state = initialState, actions) {
+  console.log('reducer called');
   switch (actions.type) {
     case 'INC':
       return { ...state, count: state.count + 1 };
@@ -33,8 +34,10 @@ function counterReducer(state = initialState, actions) {
 
 //store
 const store = Redux.createStore(counterReducer);
+console.log(store);
 function render() {
   const state = store.getState();
+  console.log(state);
   document.getElementById('count').innerHTML = state.count;
 }
 render();
