@@ -43,7 +43,7 @@ function render() {
 render();
 
 //subscribe
-store.subscribe(render);
+store.subscribe(render); //it calls render for every dispatch of an action
 
 decBtn.addEventListener('click', function () {
   store.dispatch(decrement(3));
