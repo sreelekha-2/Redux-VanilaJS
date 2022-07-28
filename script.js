@@ -31,6 +31,7 @@ function counterReducer(state = initialState, actions) {
   }
 }
 
+//store
 const store = Redux.createStore(counterReducer);
 function render() {
   const state = store.getState();
@@ -38,6 +39,7 @@ function render() {
 }
 render();
 
+//subscribe
 store.subscribe(render);
 
 decBtn.addEventListener('click', function () {
